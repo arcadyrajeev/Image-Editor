@@ -1,0 +1,93 @@
+@font-face{
+    font-family: font1;
+    src: url(NugoSans.ttf);
+    }
+
+@font-face{
+    font-family: font2;
+    src: url(MontserratRegular.otf);
+    }
+@font-face{
+    font-family: font3;
+    src: url(MontserratLight.ttf);
+    }
+
+@font-face{
+    font-family: font5;
+    src: url(Aspire.ttf);
+    }
+
+@font-face{
+    font-family: font4;
+    src: url(MontserratExtrabold.ttf);
+    }
+
+@font-face{
+    font-family: font6;
+    src: url(MontserratExtralight.ttf);
+    }
+
+    
+body{
+     background-color: #060d18;
+}
+
+.heading{
+    background-color: #0b1625;
+    height: 14vh;
+    font-family: font4;
+    font-size: 50px;
+    color: white;
+    padding-left: 30px;
+    align-content: center;
+
+}
+
+.dropbox{
+    margin-block: 30px;
+    margin-inline: auto;
+    width: 90vw;
+    height: 70vh;
+    background-color: #0b1625;
+    align-content: center;
+    border: 5px solid grey;
+    border-radius: 2rem;
+}
+
+.droptext{
+    display: block;
+    color: gray;
+    font-weight: bolder;
+    font-size: 25px;
+    font-family: font1;
+    margin-inline: auto;
+    text-align: center;
+}
+
+.img1{
+    display: block;
+    margin-inline: auto;
+    height: 200px;
+    align-items: center;
+}
+
+.dropbox.dragover_class .img1{
+    filter: brightness(150%);
+    height: 210px;
+}
+
+.dropbox.dragover_class{
+    background-color: #13243b ;
+}
+
+.dropbox{
+    transition-property: background-color;
+    transition-duration: 400ms;
+    transition-timing-function: ease-in-out;
+}
+
+.img1 {
+    transition-property: filter, height;
+    transition-duration: 400ms;
+    transition-timing-function: ease-in-out;
+  }

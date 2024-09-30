@@ -1,0 +1,207 @@
+@font-face{
+    font-family: font1;
+    src: url(NugoSans.ttf);
+    }
+
+@font-face{
+    font-family: font2;
+    src: url(MontserratRegular.otf);
+    }
+@font-face{
+    font-family: font3;
+    src: url(MontserratLight.ttf);
+    }
+
+@font-face{
+    font-family: font5;
+    src: url(Aspire.ttf);
+    }
+
+@font-face{
+    font-family: font4;
+    src: url(MontserratExtrabold.ttf);
+    }
+
+@font-face{
+    font-family: font6;
+    src: url(MontserratExtralight.ttf);
+    }
+
+body{
+     background-color: #060d18;
+}
+
+.heading{
+    background-color: #0b1625;
+    height: 14vh;
+    font-family: font4;
+    font-size: 50px;
+    color: white;
+    padding-left: 30px;
+    align-content: center;
+
+}
+
+#back-link{
+    align-items: center;
+    float:right;
+    color: #aaa;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: font3;
+    padding-right: 30px;
+    padding-top: 20px;
+}
+
+#back-link{
+    transition-property: color, font-size;
+    transition-duration: 200ms;
+    transition-timing-function: ease-in-out;
+}
+#back-link:hover{
+    color:white;
+    font-size: 21px;
+}
+
+
+.image-box{
+    overflow: hidden;
+    position: relative;
+    height: 85vh;
+    width: 77vw;
+    max-height: 85vh;
+    max-width: 77vw;
+    align-content: center;
+    background-color: #242e3b;
+    float: right;
+}
+
+.img1{
+    position:relative;
+    display: block;
+    margin-inline: auto;
+    padding: auto;
+    height:84vh;
+    align-items: center;
+    transition: transform 0.2s ease-in-out;
+    overflow: hidden;
+}
+
+.edit-menu{
+    width: 20.5vw;
+    height: 85vh;
+    background-color: #0e1c2c;
+    inset: 0;
+    float: left;
+    display: block;
+}
+
+ul{
+    margin: 0px;
+    padding: 0px;
+}
+
+.edit-option-container {
+    position: relative;
+    width: 100%;
+}
+
+.edit-options{
+    list-style-type: none;
+    width: 100%;
+    font-family: font1;
+    letter-spacing: 2px;
+    margin-top: 3px;
+    margin-inline: 0px;
+    display: block;
+    background-color: #080f1b;
+    text-align: center;
+    align-content: center;
+    color: rgb(199, 199, 199);
+    height: 60px;
+    cursor: pointer;
+}
+
+.edit-options:hover{
+    background-color: #242e3b;
+    color: white;
+}
+
+.edit-options{
+    transition-property: background-color, color;
+    transition-duration: 160ms;
+    transition-timing-function: ease-in-out;
+}
+
+
+.slider-box{
+    display: block;
+    opacity: 0;
+    z-index: -1;
+    position: relative;
+
+    visibility: hidden;
+    overflow: hidden;
+    max-height: 0;
+    transform: translateY(-2vh);
+    background-color: #080f1b;
+    color: white;
+    height:48vh;
+}
+
+.slider-box{
+    transition-property: opacity, transform, max-height;
+    transition-duration: 200ms;
+    transition-timing-function: ease-in-out;
+}
+
+
+.edit-options.active{
+    z-index: 2;
+    background-color: #242e3b;
+    color: white;
+}
+
+
+.slider-box.active{
+    z-index: 1;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    max-height: 48vh;
+}
+
+/* Basic styling for the slider */
+input[type="range"] {
+    width: 95%;
+    height: 5px; /* Thickness of the slider */
+    background: #ddd; /* Track color */
+    border-radius: 3px; /* Rounded corners */
+    outline: none; /* Remove outline on focus */
+}
+
+/* Styling the slider thumb (handle) */
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Remove default styling */
+    width: 20px; /* Thumb width */
+    height: 20px; /* Thumb height */
+    background: #4CAF50; /* Thumb color */
+    cursor: pointer; /* Cursor style on hover */
+    border-radius: 50%; /* Round thumb */
+}
+
+input[type="range"]::-moz-range-thumb {
+    width: 20px; /* Thumb width */
+    height: 20px; /* Thumb height */
+    background: #4CAF50; /* Thumb color */
+    cursor: pointer; /* Cursor style on hover */
+    border-radius: 50%; /* Round thumb */
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+    background: transparent; /* Track color when not dragging */
+}
+
+input[type="range"]:active::-webkit-slider-runnable-track {
+    background: transparent; /* Track color when dragging */
+}

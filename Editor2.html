@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Image Editor</title>
+        <link rel="stylesheet" href="style2.css"/>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    </head>
+    <body>
+        <div class="heading">Image <text style="font-family: font2; ">Editor</text>
+            <a href="Editor.html" id="back-link">
+                < Back to Home
+            </a>
+        </div>
+        <div class="edit-menu">
+            <ul>
+                <div class="edit-option-container">
+                    <li class = "edit-options">Adjust</li>
+
+                    <div class="slider-box">
+                        <label for="brightnessSlider" style="padding:5px; margin-top:30px;">
+                            Brightness
+                        </label>
+
+                        <input style="margin-block: 20px; " id="brightnessSlider"
+                            type="range" value="100"
+                            min="40" max="160">
+
+
+                        <label for="contrastSlider" style="padding:5px; margin-top:30px;">
+                            Contrast
+                        </label>
+
+                        <input style="margin-block: 20px;" id="contrastSlider"
+                            type="range" value="100"
+                            min="50" max="150" >
+
+                        <label for="highlightSlider" style="padding:5px; margin-top:30px;">
+                            Highlights
+                        </label>
+
+                        <input style="margin-block: 20px;" id="highlightSlider"
+                            type="range" value="100"
+                            min="-50" max="250" >
+                        
+                        <label for="shadowSlider" style="padding:5px; margin-top:30px;">
+                            Shadows
+                        </label>
+
+                        <input style="margin-block: 20px;" id="shadowSlider"
+                            type="range" value="100"
+                            min="-80" max="280" >
+
+                    </div>
+                </div>
+
+
+                <div class="edit-option-container">
+                    <li class = "edit-options">Colors</li>
+
+                    <div class="slider-box">
+                        <label for="saturationSlider" style="padding:5px; margin-top:30px;">
+                            Saturation
+                        </label>
+
+                        <input style="margin-block: 20px;" id="saturationSlider"
+                            type="range" value="100"
+                            min="0" max="400" >
+
+                        <label for="saturationSlider" style="padding:5px; margin-top:30px;">
+                        Hue
+                        </label>
+
+                        <input style="margin-block: 20px;" id="hueSlider"
+                            type="range" value="0"
+                            min="0" max="360" >
+
+                        <label for="saturationSlider" style="padding:5px; margin-top:30px;">
+                        Sepia
+                        </label>
+
+                        <input style="margin-block: 20px;" id="sepiaSlider"
+                            type="range" value="0"
+                            min="0" max="100" >
+                    </div>
+                </div>
+
+
+                <div class="edit-option-container">
+                    <li class = "edit-options">Details</li>
+                    <div class="slider-box">
+                        <label for="sharpenSlider" style="padding:5px; margin-top:30px;">
+                        Sharpen
+                        </label>
+
+                        <input style="margin-block: 20px;" id="sharpenSlider"
+                            type="range" value="0"
+                            min="0" max="100" >
+
+                        <label for="blurSlider" style="padding:5px; margin-top:30px;">
+                        Blur
+                        </label>
+
+                        <input style="margin-block: 20px;" id="blurSlider"
+                            type="range" value="0"
+                            min="0" max="100" >
+                    </div>
+                </div>
+
+
+                <div class="edit-option-container">
+                    <li class = "edit-options">Filters</li>
+                    <div class="slider-box"></div>
+                </div>
+            </ul>
+        </div>
+        <div class="image-box">
+            <img id="image-display" class="img1"> 
+        </div>
+
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="display:none">
+            <defs>
+              <filter id="sharpen">
+                <feConvolveMatrix order="3" kernelMatrix="0 -1 0 -1 5 -1 0 -1 0" />
+              </filter>
+            </defs>
+          </svg>
+
+        <script src="editor.js"></script>
+    </body>
+</html>
